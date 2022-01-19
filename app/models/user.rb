@@ -17,3 +17,11 @@ class User < ApplicationRecord
           user
       end
 end
+
+# The reason why you're getting a 404 error is that you're 
+# not setting the client_id query parameter. You should create an 
+# OAuth Application in your settings and use the client_id you get there.
+
+# So, the URL should look something like this:
+
+# https://github.com/login/oauth/authorize?client_id=a8a7ab5b5b4c3c21c&...
